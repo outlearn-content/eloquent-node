@@ -9,6 +9,7 @@ license : "CC BY-NC",
 contact : "info@eloquentjavascript.net"
 -->
 
+<!-- @section, "title": "Getting going" -->
 So far, you have learned the JavaScript language and used it within a single environment: the browser. This chapter and the next one will briefly introduce you to Node.js, a program that allows you to apply your JavaScript skills outside of the browser. With it, you can build anything from simple command-line tools to dynamic HTTP servers.
 
 These chapters aim to teach you the important ideas that Node.js builds on and to give you enough information to write some useful programs for it. They do not try to be a complete, or even a thorough, treatment of Node.
