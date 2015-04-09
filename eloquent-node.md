@@ -16,7 +16,11 @@ These chapters aim to teach you the important ideas that Node.js builds on and t
 
 Whereas you could run the code in previous chapters directly on these pages, since it was either raw JavaScript or written for the browser, the code samples in this chapter are written for Node and won’t run in the browser.
 
-If you want to follow along and run the code in this chapter, start by going to nodejs.org and following the installation instructions for your operating system. Also refer to that website for further documentation about Node and its built-in modules.
+If you want to follow along and run the code in this chapter, start by going to [nodejs.org](https://nodejs.org) and following the installation instructions for your operating system. Also refer to that website for further documentation about Node and its built-in modules.
+
+<div class="hack-todo">
+  Install Node.js following instructions at [nodejs.org](https://nodejs.org).
+</div>
 
 <!-- @section -->
 
@@ -64,12 +68,18 @@ But for a JavaScript-based system, I would argue that callback-style asynchronic
 
 When Node.js is installed on a system, it provides a program called node, which is used to run JavaScript files. Say you have a file hello.js, containing this code:
 
+```
 var message = "Hello world";
 console.log(message);
+```
+
 You can then run node from the command line like this to execute the program:
 
+```
 $ node hello.js
 Hello world
+```
+
 The console.log method in Node does something similar to what it does in the browser. It prints out a piece of text. But in Node, the text will go to the process’ standard output stream, rather than to a browser’s JavaScript console.
 
 If you run node without giving it a file, it provides you with a prompt at which you can type JavaScript code and immediately see the result.
@@ -83,6 +93,9 @@ $ node
 > process.exit(0)
 $
 ```
+<div class="hack-todo">
+  Run `node` and try executing commands above and some other commands of your choice.
+</div>
 
 The process variable, just like the console variable, is available globally in Node. It provides various ways to inspect and manipulate the current program. The exit method ends the process and can be given an exit status code, which tells the program that started node (in this case, the command-line shell) whether the program completed successfully (code zero) or encountered an error (any other code).
 
@@ -92,6 +105,9 @@ To find the command-line arguments given to your script, you can read process.ar
 $ node showargv.js one --and two
 ["node", "/home/marijn/showargv.js", "one", "--and", "two"]
 ```
+<div class="hack-todo">
+  Create and run `showargv.js` as described above.
+</div>
 
 All the standard JavaScript global variables, such as Array, Math, and JSON, are also present in Node’s environment. Browser-related functionality, such as document and alert, is absent.
 
@@ -140,7 +156,9 @@ We can now call our tool like this:
 $ node main.js JavaScript
 Of{fXhwnuy
 ```
-
+<div class="hack-todo">
+  Write and run `node.js` as shown above.
+</div>
 
 <!-- @section -->
 
@@ -187,6 +205,16 @@ There is much more to NPM than npm install. It reads package.json files, which c
 
 This book won’t delve further into the details of NPM usage. Refer to npmjs.org for further documentation and for an easy way to search for libraries.
 
+<div class="hack-todo">
+  Install `figlet`.
+</div>
+<div class="hack-todo">
+  Read about `npm` at [npmjs.org](http://npmjs.org).
+</div>
+<div class="hack-todo">
+  Install another Node module you find at [npmjs.org](http://npmjs.org).
+</div>
+
 <!-- @section -->
 
 # The file system module
@@ -216,6 +244,13 @@ fs.readFile("file.txt", function(error, buffer) {
 });
 ```
 
+<div class="hack-todo">
+  Read in a file encoded in UTF-8 using `fs`.
+</div>
+<div class="hack-todo">
+  Read in a binary file.
+</div>
+
 A similar function, writeFile, is used to write a file to disk.
 
 ```javascript
@@ -230,7 +265,15 @@ fs.writeFile("graffiti.txt", "Node was here", function(err) {
 
 Here, it was not necessary to specify the encoding since writeFile will assume that if it is given a string to write, rather than a Buffer object, it should write it out as text using its default character encoding, which is UTF-8.
 
+<div class="hack-todo">
+  Write a file using fs.writeFile.
+</div>
+
 The "fs" module contains many other useful functions: readdir will return the files in a directory as an array of strings, stat will retrieve information about a file, rename will rename a file, unlink will remove one, and so on. See the documentation at nodejs.org for specifics.
+
+<div class="hack-todo">
+  Print all the files in a directory using `fs.readdir`.
+</div>
 
 Many of the functions in "fs" come in both synchronous and asynchronous variants. For example, there is a synchronous version of readFile called readFileSync.
 
@@ -261,6 +304,10 @@ server.listen(8000);
 ```
 
 If you run this script on your own machine, you can point your web browser at http://localhost:8000/hello to make a request to your server. It will respond with a small HTML page.
+
+<div class="hack-todo">
+  Start an HTTP server using the code above.
+</div>
 
 The function passed as an argument to createServer is called every time a client tries to connect to the server. The request and response variables are objects representing the incoming and outgoing data. The first contains information about the request, such as its url property, which tells us to what URL the request was made.
 
@@ -346,6 +393,10 @@ request.end("Hello server");
 ```
 
 The example writes to process.stdout (the process’ standard output, as a writable stream) instead of using console.log. We can’t use console.log because it adds an extra newline character after each piece of text that it writes, which isn’t appropriate here.
+
+<div class="hack-todo">
+  Run the script above on your machine.
+</div>
 
 <!-- @section -->
 
@@ -504,6 +555,10 @@ File not found
 
 The first request for file.txt fails since the file does not exist yet. The PUT request creates the file, and behold, the next request successfully retrieves it. After deleting it with a DELETE request, the file is again missing.
 
+<div class="hack-todo">
+  Test the server with the curl commands listed above.
+</div>
+
 <!-- @section -->
 
 # Error handling
@@ -584,6 +639,10 @@ Do this again, using Node’s http.request function. Ask for at least the media 
 
 Write out the content of the responses to each request.
 
+<div class="hack-todo">
+  Complete the exercise.
+</div>
+
 ## Fixing a leak
 
 For easy remote access to some files, I might get into the habit of having the file server defined in this chapter running on my machine, in the /home/marijn/public directory. Then, one day, I find that someone has gained access to all the passwords I stored in my browser.
@@ -611,6 +670,10 @@ Change urlToPath to fix this problem. Take into account the fact that Node on Wi
 
 Also, meditate on the fact that as soon as you expose some half-baked system on the Internet, the bugs in that system might be used to do bad things to your machine.
 
+<div class="hack-todo">
+  Complete the exercise.
+</div>
+
 ## Creating directories
 
 Though the DELETE method is wired up to delete directories (using fs.rmdir), the file server currently does not provide any way to create a directory.
@@ -632,3 +695,7 @@ Start by making only a single file editable. Then make it so that the user can s
 Don’t work directly in the code on the file server, since if you make a mistake you are likely to damage the files there. Instead, keep your work outside of the publicly accessible directory and copy it there when testing.
 
 If your computer is directly connected to the Internet, without a firewall, router, or other interfering device in between, you might be able to invite a friend to use your website. To check, go to whatismyip.com, copy the IP address it gives you into the address bar of your browser, and add :8000 after it to select the right port. If that brings you to your site, it is online for everybody to see.
+
+<div class="hack-todo">
+  Complete the exercise.
+</div>
