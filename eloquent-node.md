@@ -16,10 +16,10 @@ These chapters aim to teach you the important ideas that Node.js builds on and t
 
 Whereas you could run the code in previous chapters directly on these pages, since it was either raw JavaScript or written for the browser, the code samples in this chapter are written for Node and won’t run in the browser.
 
-If you want to follow along and run the code in this chapter, start by going to [nodejs.org](https://nodejs.org) and following the installation instructions for your operating system. Also refer to that website for further documentation about Node and its built-in modules.
+If you want to follow along and run the code in this chapter, start by going to [nodejs.org](http://nodejs.org) and following the installation instructions for your operating system. Also refer to that website for further documentation about Node and its built-in modules.
 
 <div class="hack-todo">
-  Install Node.js following instructions at [nodejs.org](https://nodejs.org).
+  Install Node.js following instructions at <a href="http://nodejs.org">nodejs.org</a>.
 </div>
 
 <!-- @section -->
@@ -94,7 +94,7 @@ $ node
 $
 ```
 <div class="hack-todo">
-  Run `node` and try executing commands above and some other commands of your choice.
+  Run node and try executing commands above and some other commands of your choice.
 </div>
 
 The process variable, just like the console variable, is available globally in Node. It provides various ways to inspect and manipulate the current program. The exit method ends the process and can be given an exit status code, which tells the program that started node (in this case, the command-line shell) whether the program completed successfully (code zero) or encountered an error (any other code).
@@ -106,7 +106,7 @@ $ node showargv.js one --and two
 ["node", "/home/marijn/showargv.js", "one", "--and", "two"]
 ```
 <div class="hack-todo">
-  Create and run `showargv.js` as described above.
+  Create and run showargv.js as described above.
 </div>
 
 All the standard JavaScript global variables, such as Array, Math, and JSON, are also present in Node’s environment. Browser-related functionality, such as document and alert, is absent.
@@ -157,7 +157,7 @@ $ node main.js JavaScript
 Of{fXhwnuy
 ```
 <div class="hack-todo">
-  Write and run `node.js` as shown above.
+  Write and run node.js as shown above.
 </div>
 
 <!-- @section -->
@@ -206,13 +206,13 @@ There is much more to NPM than npm install. It reads package.json files, which c
 This book won’t delve further into the details of NPM usage. Refer to npmjs.org for further documentation and for an easy way to search for libraries.
 
 <div class="hack-todo">
-  Install `figlet`.
+  Install figlet.
 </div>
 <div class="hack-todo">
-  Read about `npm` at [npmjs.org](http://npmjs.org).
+  Read about npm at <a href="http://npmjs.org">npmjs.org</a>.
 </div>
 <div class="hack-todo">
-  Install another Node module you find at [npmjs.org](http://npmjs.org).
+  Install another Node module you find at <a href="http://npmjs.org">npmjs.org</a>.
 </div>
 
 <!-- @section -->
@@ -245,7 +245,7 @@ fs.readFile("file.txt", function(error, buffer) {
 ```
 
 <div class="hack-todo">
-  Read in a file encoded in UTF-8 using `fs`.
+  Read in a file encoded in UTF-8 using fs.
 </div>
 <div class="hack-todo">
   Read in a binary file.
@@ -272,7 +272,7 @@ Here, it was not necessary to specify the encoding since writeFile will assume t
 The "fs" module contains many other useful functions: readdir will return the files in a directory as an array of strings, stat will retrieve information about a file, rename will rename a file, unlink will remove one, and so on. See the documentation at nodejs.org for specifics.
 
 <div class="hack-todo">
-  Print all the files in a directory using `fs.readdir`.
+  Print all the files in a directory using fs.readdir.
 </div>
 
 Many of the functions in "fs" come in both synchronous and asynchronous variants. For example, there is a synchronous version of readFile called readFileSync.
