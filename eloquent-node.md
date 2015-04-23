@@ -16,11 +16,10 @@ These chapters aim to teach you the important ideas that Node.js builds on and t
 
 Whereas you could run the code in previous chapters directly on these pages, since it was either raw JavaScript or written for the browser, the code samples in this chapter are written for Node and won’t run in the browser.
 
-If you want to follow along and run the code in this chapter, start by going to [nodejs.org](http://nodejs.org) and following the installation instructions for your operating system. Also refer to that website for further documentation about Node and its built-in modules.
+If you want to follow along and run the code in this chapter, start by going to nodejs.org and following the installation instructions for your operating system. Also refer to that website for further documentation about Node and its built-in modules.
 
-<div class="hack-todo">
-  Install Node.js following instructions at <a href="http://nodejs.org">nodejs.org</a>.
-</div>
+<!-- @link, "url" : "http://nodejs.org", "task" : "Install Node.js for your operating system." -->
+
 
 <!-- @section -->
 
