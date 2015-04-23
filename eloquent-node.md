@@ -299,7 +299,7 @@ server.listen(8000);
 If you run this script on your own machine, you can point your web browser at http://localhost:8000/hello to make a request to your server. It will respond with a small HTML page.
 
 <div class="hack-todo">
-  Start an HTTP server using the code above.
+  Start an HTTP server using the sample above.
 </div>
 
 The function passed as an argument to createServer is called every time a client tries to connect to the server. The request and response variables are objects representing the incoming and outgoing data. The first contains information about the request, such as its url property, which tells us to what URL the request was made.
@@ -388,7 +388,7 @@ request.end("Hello server");
 The example writes to process.stdout (the process’ standard output, as a writable stream) instead of using console.log. We can’t use console.log because it adds an extra newline character after each piece of text that it writes, which isn’t appropriate here.
 
 <div class="hack-todo">
-  Run the script above on your machine.
+  Run the example script on your machine.
 </div>
 
 <!-- @section -->
@@ -549,7 +549,7 @@ File not found
 The first request for file.txt fails since the file does not exist yet. The PUT request creates the file, and behold, the next request successfully retrieves it. After deleting it with a DELETE request, the file is again missing.
 
 <div class="hack-todo">
-  Test the server with the curl commands listed above.
+  Test the server with the sample curl commands.
 </div>
 
 <!-- @section -->
@@ -633,7 +633,7 @@ Do this again, using Node’s http.request function. Ask for at least the media 
 Write out the content of the responses to each request.
 
 <div class="hack-todo">
-  Complete the exercise.
+  Complete the "Content negotiation, again" exercise.
 </div>
 
 ## Fixing a leak
@@ -664,7 +664,7 @@ Change urlToPath to fix this problem. Take into account the fact that Node on Wi
 Also, meditate on the fact that as soon as you expose some half-baked system on the Internet, the bugs in that system might be used to do bad things to your machine.
 
 <div class="hack-todo">
-  Complete the exercise.
+  Complete the "Fixing a leak" exercise.
 </div>
 
 ## Creating directories
@@ -672,6 +672,10 @@ Also, meditate on the fact that as soon as you expose some half-baked system on 
 Though the DELETE method is wired up to delete directories (using fs.rmdir), the file server currently does not provide any way to create a directory.
 
 Add support for a method MKCOL, which should create a directory by calling fs.mkdir. MKCOL is not one of the basic HTTP methods, but it does exist, for this same purpose, in the WebDAV standard, which specifies a set of extensions to HTTP, making it suitable for writing resources, not just reading them.
+
+<div class="hack-todo">
+  Complete the "Creating directories" exercise.
+</div>
 
 ## A public space on the web
 
@@ -690,5 +694,5 @@ Don’t work directly in the code on the file server, since if you make a mistak
 If your computer is directly connected to the Internet, without a firewall, router, or other interfering device in between, you might be able to invite a friend to use your website. To check, go to whatismyip.com, copy the IP address it gives you into the address bar of your browser, and add :8000 after it to select the right port. If that brings you to your site, it is online for everybody to see.
 
 <div class="hack-todo">
-  Complete the exercise.
+  Complete the "A public space on the web" exercise.
 </div>
