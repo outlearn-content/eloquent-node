@@ -20,6 +20,7 @@ If you want to follow along and run the code in this chapter, start by going to 
 
 <!-- @link, "url" : "http://nodejs.org", "task" : "Install Node.js for your operating system." -->
 
+<!-- @asset, "contentType" : "outlearn/prototype-feature", "text" : "{ \"multiple_choice\": \"The code samples in this chapter cannot be run directly in the browser because\", \"answers\" : [ \"They are raw JavaScript\", \"They require Node.\", \"Because they only work on the newest browsers.\" ], \"correct\" : 1 }"-->
 
 <!-- @section -->
 
@@ -92,13 +93,12 @@ $ node
 > process.exit(0)
 $
 ```
-<div class="hack-todo">
-  Run node and try executing some commands of your choice.
-</div>
+
+<!-- @asset, "contentType" : "outlearn/prototype-feature", "text" : "{ \"task\": \"Run node and try executing some commands of your choice.\" }"-->
 
 The process variable, just like the console variable, is available globally in Node. It provides various ways to inspect and manipulate the current program. The exit method ends the process and can be given an exit status code, which tells the program that started node (in this case, the command-line shell) whether the program completed successfully (code zero) or encountered an error (any other code).
 
-To find the command-line arguments given to your script, you can read process.argv, which is an array of strings. Note that it also includes the name of the node commands and your script name, so the actual arguments start at index 2. If showargv.js simply contains the statement console.log(process.argv), you could run it like this:
+To find the command-line arguments given to your script, you can read `process.argv`, which is an array of strings. Note that it also includes the name of the node commands and your script name, so the actual arguments start at index 2. If `showargv.js` simply contains the statement `console.log(process.argv)`, you could run it like this:
 
 ```javascript
 $ node showargv.js one --and two
@@ -236,6 +236,8 @@ fs.readFile("file.txt", function(error, buffer) {
               "The first byte is:", buffer[0]);
 });
 ```
+
+<!-- @asset, "contentType" : "outlearn/prototype-feature", "text" : "{ \"multiple_choice\": \"If you do not provide an encoding to the readFile() method, the system will\", \"answers\" : [ \"Use `utf8` as the default.\", \"Throw an error.\", \"Not return a string.\" ], \"correct\" : 2 }"-->
 
 <div class="hack-todo">
   Read in a file encoded in UTF-8 using fs.
