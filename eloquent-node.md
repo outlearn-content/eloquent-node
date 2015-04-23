@@ -93,7 +93,7 @@ $ node
 $
 ```
 <div class="hack-todo">
-  Run node and try executing commands above and some other commands of your choice.
+  Run node and try executing some commands of your choice.
 </div>
 
 The process variable, just like the console variable, is available globally in Node. It provides various ways to inspect and manipulate the current program. The exit method ends the process and can be given an exit status code, which tells the program that started node (in this case, the command-line shell) whether the program completed successfully (code zero) or encountered an error (any other code).
@@ -105,7 +105,7 @@ $ node showargv.js one --and two
 ["node", "/home/marijn/showargv.js", "one", "--and", "two"]
 ```
 <div class="hack-todo">
-  Create and run showargv.js as described above.
+  Create and run showargv.js as described in the text.
 </div>
 
 All the standard JavaScript global variables, such as Array, Math, and JSON, are also present in Node’s environment. Browser-related functionality, such as document and alert, is absent.
@@ -156,7 +156,7 @@ $ node main.js JavaScript
 Of{fXhwnuy
 ```
 <div class="hack-todo">
-  Write and run node.js as shown above.
+  Write main.js and garble.js and try running them.
 </div>
 
 <!-- @section -->
@@ -191,11 +191,6 @@ $ node
 
 After running npm install, NPM will have created a directory called node_modules. Inside that directory will be a figlet directory, which contains the library. When we run node and call require("figlet"), this library is loaded, and we can call its text method to draw some big letters.
 
-<div class="hack-todo">
-  Run the figlet example on your own machine.
-</div>
-
-
 Somewhat unexpectedly perhaps, instead of simply returning the string that makes up the big letters, figlet.text takes a callback function that it passes its result to. It also passes the callback another argument, error, which will hold an error object when something goes wrong or null when everything is all right.
 
 This is a common pattern in Node code. Rendering something with figlet requires the library to read a file that contains the letter shapes. Reading that file from disk is an asynchronous operation in Node, so figlet.text can’t immediately return its result. Asynchronicity is infectious, in a way—every function that calls an asynchronous function must itself become asynchronous.
@@ -204,11 +199,10 @@ There is much more to NPM than npm install. It reads package.json files, which c
 
 This book won’t delve further into the details of NPM usage. Refer to npmjs.org for further documentation and for an easy way to search for libraries.
 
+<!-- @link, "url" : "http://npmjs.org", "task" : "Read about npm." -->
+
 <div class="hack-todo">
   Install figlet.
-</div>
-<div class="hack-todo">
-  Read about npm at <a href="http://npmjs.org">npmjs.org</a>.
 </div>
 <div class="hack-todo">
   Install another Node module you find at <a href="http://npmjs.org">npmjs.org</a>.
