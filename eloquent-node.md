@@ -195,9 +195,9 @@ This is a common pattern in Node code. Rendering something with figlet requires 
 
 There is much more to NPM than npm install. It reads package.json files, which contain JSON-encoded information about a program or library, such as which other libraries it depends on. Doing npm install in a directory that contains such a file will automatically install all dependencies, as well as their dependencies. The npm tool is also used to publish libraries to NPM’s online repository of packages so that other people can find, download, and use them.
 
-This book won’t delve further into the details of NPM usage. Refer to npmjs.org for further documentation and for an easy way to search for libraries.
+This book won’t delve further into the details of NPM usage. Refer to [npmjs.org](http://npmjs.org) for further documentation and for an easy way to search for libraries.
 
-<!-- @link, "url" : "http://npmjs.org", "task" : "Read about npm." -->
+<!-- @REMOVETHISlink, "url" : "http://npmjs.org", "task" : "Read about npm." -->
 
 <!-- @asset, "contentType" : "outlearn/prototype-feature", "text" : "{ \"task\": \"Install figlet.\" }"-->
 
