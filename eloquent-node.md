@@ -1,16 +1,16 @@
-<!--
 
+<!--
 name: eloquent-node
-version : "0.0.1"
-freshnessDate: 2015-12-12
+freshnessDate: 2014-12-12
+version : "0.1.2"
 title : "Eloquent JavaScript - Chapter 20 Node.js"
 description: "This is a book about JavaScript, programming, and the wonders of the digital."
 homepage : "http://eloquentjavascript.net/"
 author : "Marijn Haverbeke"
 license : "CC BY-NC"
 contact : { email: "info@eloquentjavascript.net" }
-
 -->
+
 
 <!-- @section, "title": "Getting going" -->
 So far, you have learned the JavaScript language and used it within a single environment: the browser. This chapter and the next one will briefly introduce you to Node.js, a program that allows you to apply your JavaScript skills outside of the browser. With it, you can build anything from simple command-line tools to dynamic HTTP servers.
