@@ -1,6 +1,7 @@
 <!--
 name: eloquent-node
 version : 0.0.1
+freshnessDate: 2015-12-12
 title : "Eloquent JavaScript - Chapter 20 Node.js"
 description: "This is a book about JavaScript, programming, and the wonders of the digital."
 homepage : "http://eloquentjavascript.net/"
