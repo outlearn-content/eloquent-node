@@ -1,13 +1,15 @@
 <!--
+
 name: eloquent-node
-version : 0.0.1
+version : "0.0.1"
 freshnessDate: 2015-12-12
 title : "Eloquent JavaScript - Chapter 20 Node.js"
 description: "This is a book about JavaScript, programming, and the wonders of the digital."
 homepage : "http://eloquentjavascript.net/"
 author : "Marijn Haverbeke"
 license : "CC BY-NC"
-contact : "info@eloquentjavascript.net"
+contact : { email: "info@eloquentjavascript.net" }
+
 -->
 
 <!-- @section, "title": "Getting going" -->
