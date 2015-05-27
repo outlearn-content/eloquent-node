@@ -1,0 +1,15 @@
+{
+  "olpVersion" : "0.5",
+
+  "paths" : [
+  ],
+
+  "modules" : [
+    {
+      "olm" : "./modules/eloquent-node.md"
+    }
+  ],
+
+  "assets" : [
+  ]
+}
