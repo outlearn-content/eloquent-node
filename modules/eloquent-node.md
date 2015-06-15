@@ -21,7 +21,16 @@ If you want to follow along and run the code in this chapter, start by going to 
 
 <!-- @link, "url" : "https://nodejs.org", "text" : "Install Node.js for your operating system." -->
 
-<!-- @asset, "contentType" : "outlearn/prototype-feature", "text" : "{ \"multiple_choice\": \"The code samples in this chapter cannot be run directly in the browser because\", \"answers\" : [ \"They are raw JavaScript\", \"They require Node.\", \"Because they only work on the newest browsers.\" ], \"correct\" : 1 }"-->
+<!-- @multipleChoice -->
+
+The code samples in this chapter cannot be run directly in the browser because:
+
+- [ ] They are raw JavaScript
+- [X] They require Node
+- [ ] Because they only work on the newest browsers
+
+
+<!-- @end -->
 
 <!-- @section -->
 
@@ -232,7 +241,15 @@ fs.readFile("file.txt", function(error, buffer) {
 });
 ```
 
-<!-- @asset, "contentType" : "outlearn/prototype-feature", "text" : "{ \"multiple_choice\": \"If you do not provide an encoding to the readFile() method, the system will\", \"answers\" : [ \"Use `utf8` as the default.\", \"Throw an error.\", \"Not return a string.\" ], \"correct\" : 2 }"-->
+<!-- @multiplChoice -->
+
+If you do not provide an encoding to the readFile() method, the system will:
+
+- [ ] Use `utf8` as the default
+- [ ] Throw an error
+- [ ] Not return a string
+
+<!-- @end -->
 
 <!-- @task, "text" : "Read in a file encoded in UTF-8 using fs."-->
 
