@@ -247,7 +247,7 @@ If you do not provide an encoding to the readFile() method, the system will:
 
 - [ ] Use `utf8` as the default
 - [ ] Throw an error
-- [ ] Not return a string
+- [x] Not return a string
 
 <!-- @end -->
 
