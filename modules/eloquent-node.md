@@ -45,15 +45,6 @@ Node was initially conceived for the purpose of making asynchronous I/O easy and
 
 JavaScript lends itself well to a system like Node. It is one of the few programming languages that does not have a built-in way to do I/O. Thus, JavaScript could be fit onto Node’s rather eccentric approach to I/O without ending up with two inconsistent interfaces. In 2009, when Node was being designed, people were already doing callback-based I/O in the browser, so the community around the language was used to an asynchronous programming style.
 
-<div class="hack-ssh-access">
-  <div class="before-click">
-    Follow along with these examples in a ready-made NodeJS environment.
-  </div>
-  <div class="after-click hidden">
-    Paste <em>'ssh nodejs@52.4.173.58'</em> into your terminal, and login with password <em>'outlearn'</em>.
-  </div>
-</div>
-
 <!-- @section -->
 
 # Asynchronicity
