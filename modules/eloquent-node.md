@@ -234,7 +234,7 @@ fs.readFile("file.txt", function(error, buffer) {
 });
 ```
 
-<!-- @multiplChoice -->
+<!-- @multipleChoice -->
 
 If you do not provide an encoding to the readFile() method, the system will:
 
